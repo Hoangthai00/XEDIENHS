@@ -138,7 +138,7 @@ async function aiReply(text, chatBody) {
     try {
         // TÍNH NĂNG BẢO MẬT: Gọi vào trạm trung chuyển của Netlify (Backend)
         // Không còn gọi trực tiếp sang Google API nữa
-        const response = await fetch('/api/functions/gemini', {
+        const response = await fetch('/api/gemini', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: text }) // Gửi câu hỏi của khách vào nhà kho
